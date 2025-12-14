@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Tourism Management System</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    position: relative;
+  }
+  header {
+    background: #2a9d8f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  header h1 { margin: 0; font-size: 28px; }
+
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h2 { text-align: center; color: #21867a; margin-bottom: 30px; }
+
+  /* Accordion styles */
+  .accordion {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-left: 5px solid #2a9d8f;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  .accordion i {
+    color: #2a9d8f;
+    margin-right: 10px;
+    font-size: 18px;
+    width: 25px;
+    text-align: center;
+  }
+  .accordion:hover { background-color: #f0f8f5; transform: translateY(-2px); }
+  .accordion.active { background-color: #f0f8f5; }
+  .accordion:after {
+    content: '\002B';
+    font-size: 20px;
+    margin-left: auto;
+    transition: transform 0.3s;
+  }
+  .accordion.active:after { transform: rotate(45deg); }
+
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    background-color: #fafafa;
+    padding: 0 20px;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+  }
+  .panel.open {
+    opacity: 1;
+    padding: 15px 20px;
+  }
+  .panel p { padding: 0; margin: 0; line-height: 1.6; color: #555; }
+
+  /* Sidebar navigation */
+  .sidebar {
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+  }
+  .sidebar a {
+    text-decoration: none;
+    color: #2a9d8f;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+  }
+  .sidebar a:hover, .sidebar a.active {
+    background: #2a9d8f;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  /* Back to Top button */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    z-index: 100;
+  }
+  #backToTop:hover { background: #21867a; transform: scale(1.1); }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #2a9d8f;
+    color: white;
+    margin-top: 50px;
+  }
+
+  @media(max-width:768px){
+    .accordion { font-size: 14px; }
+    header h1 { font-size: 24px; }
+    .sidebar { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Privacy Policy</h1>
+</header>
+
+<div class="container">
+  <h2>Our Commitment to Your Privacy</h2>
+
+  <div id="section1" class="accordion"><i class="fa-solid fa-info-circle"></i> 1. Introduction</div>
+  <div class="panel">
+    <p>We value your privacy and are committed to protecting your personal information. This policy explains how we collect, use, and safeguard your data when you use our Tourism Management System.</p>
+  </div>
+
+  <div id="section2" class="accordion"><i class="fa-solid fa-database"></i> 2. Information We Collect</div>
+  <div class="panel">
+    <p>We may collect information such as your name, email, phone number, and travel preferences when you register or book tours. We also collect usage data for improving our services.</p>
+  </div>
+
+  <div id="section3" class="accordion"><i class="fa-solid fa-gear"></i> 3. How We Use Your Information</div>
+  <div class="panel">
+    <p>Your data is used to provide booking services, personalize your experience, send notifications or updates, and improve our website and offerings.</p>
+  </div>
+
+  <div id="section4" class="accordion"><i class="fa-solid fa-share-nodes"></i> 4. Data Sharing</div>
+  <div class="panel">
+    <p>We do not sell your personal data. We may share information with trusted service providers to facilitate your bookings or comply with legal obligations.</p>
+  </div>
+
+  <div id="section5" class="accordion"><i class="fa-solid fa-lock"></i> 5. Data Security</div>
+  <div class="panel">
+    <p>We implement appropriate security measures to protect your data from unauthorized access, alteration, disclosure, or destruction.</p>
+  </div>
+
+  <div id="section6" class="accordion"><i class="fa-solid fa-cookie-bite"></i> 6. Cookies</div>
+  <div class="panel">
+    <p>We use cookies to enhance user experience, analyze site traffic, and provide personalized content. You can manage cookies through your browser settings.</p>
+  </div>
+
+  <div id="section7" class="accordion"><i class="fa-solid fa-user-shield"></i> 7. Your Rights</div>
+  <div class="panel">
+    <p>You have the right to access, update, or request deletion of your personal information. Contact us if you wish to exercise these rights.</p>
+  </div>
+
+  <div id="section8" class="accordion"><i class="fa-solid fa-file-pen"></i> 8. Changes to This Policy</div>
+  <div class="panel">
+    <p>We may update this Privacy Policy from time to time. All changes will be posted on this page with an updated date.</p>
+  </div>
+</div>
+
+<!-- Sidebar navigation -->
+<div class="sidebar">
+  <a href="#section1">Introduction</a>
+  <a href="#section2">Information We Collect</a>
+  <a href="#section3">How We Use</a>
+  <a href="#section4">Data Sharing</a>
+  <a href="#section5">Data Security</a>
+  <a href="#section6">Cookies</a>
+  <a href="#section7">Your Rights</a>
+  <a href="#section8">Policy Changes</a>
+</div>
+
+<!-- Back to Top Button -->
+<button id="backToTop">↑ Top</button>
+
+<footer>
+  &copy; 2025 Tourism Management System. All rights reserved.
+</footer>
+
+<script>
+  // Accordion animation
+  const accordions = document.querySelectorAll('.accordion');
+  accordions.forEach(acc => {
+    acc.addEventListener('click', () => {
+      acc.classList.toggle('active');
+      const panel = acc.nextElementSibling;
+      if(panel.style.maxHeight){
+        panel.style.maxHeight = null;
+        panel.classList.remove('open');
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.classList.add('open');
+      }
+    });
+  });
+
+  // Back to Top
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 300) backToTop.style.display = 'block';
+    else backToTop.style.display = 'none';
+    highlightSidebar();
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Sidebar highlight
+  const sections = document.querySelectorAll('.accordion');
+  const sidebarLinks = document.querySelectorAll('.sidebar a');
+  function highlightSidebar() {
+    let scrollPos = window.scrollY + 200;
+    sections.forEach((section, index) => {
+      const offsetTop = section.offsetTop;
+      const offsetHeight = section.offsetHeight;
+      if(scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight){
+        sidebarLinks.forEach(link => link.classList.remove('active'));
+        sidebarLinks[index].classList.add('active');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>London Luxury City Tour – Details</title>
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --panel:#ffffff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --border:#e6eaf2;
+      --tint:#f4f6ff;
+      --primary:#5b7cfa;
+      --primary-ink:#2335a3;
+      --shadow:0 12px 28px rgba(2,6,23,.10);
+      --r-lg:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans";
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+
+    /* Page with LEFT 10% margin */
+    .page{ margin:28px 4% 28px 10%; }
+
+    /* Grid: left scrollable, right sticky */
+    .layout{
+      display:grid;
+      grid-template-columns:minmax(0,1.75fr) minmax(300px,.95fr);
+      gap:28px; align-items:start;
+    }
+
+    .content{
+      background:var(--panel); border:1px solid var(--border);
+      border-radius:var(--r-lg); box-shadow:var(--shadow);
+      padding:26px; max-height:calc(100vh - 64px); overflow:auto;
+    }
+    .hero{ width:100%; aspect-ratio:16/7; object-fit:cover; border-radius:18px; margin-bottom:16px; }
+
+    .title{ font-size:clamp(28px,2.6vw,36px); font-weight:900; letter-spacing:-.02em; margin:0 0 10px 0; }
+    .lead{ max-width:68ch; color:var(--muted); font-size:18px; line-height:1.65; margin:0 0 22px 0; }
+
+    h2{ font-size:22px; font-weight:900; letter-spacing:-.01em; margin:18px 0 12px 0; }
+    p{ margin:10px 0; max-width:70ch; line-height:1.7; }
+    .kv{ color:#1f2937; margin:6px 0; }
+    .kv b{ font-weight:800; }
+
+    /* Lists: force each li on new line with clear bullets */
+    ul.clean, ul.check{
+      margin:8px 0 12px 20px;
+      padding-left:20px;
+      list-style-position:outside;
+      list-style-type:disc;
+    }
+    ul.clean li, ul.check li{
+      display:list-item;
+      margin:8px 0;
+    }
+
+    /* Day cards */
+    .day{ background:#f5f7ff; border:1px solid #e7eaff; border-radius:16px; padding:16px; margin:12px 0; }
+    .day b{ font-weight:800; }
+
+    /* Sticky right overview */
+    .sidebar{ position:sticky; top:20px; }
+    .overview{
+      background:var(--tint); border:1px solid #e6e9ff; border-radius:var(--r-lg);
+      box-shadow:var(--shadow); padding:22px;
+    }
+    .overview h3{ margin:6px 0 14px 0; font-size:22px; font-weight:900; letter-spacing:-.01em; }
+    .row{ display:flex; justify-content:space-between; gap:18px; padding:12px 0; border-bottom:1px dashed #e5e7eb; font-size:15.5px; }
+    .row:last-child{ border-bottom:none; }
+    .label{ color:var(--muted); }
+    .cta{ margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn{ border:none; cursor:pointer; font-weight:800; padding:12px 18px; border-radius:999px; }
+    .btn.primary{ background:var(--primary); color:#fff; }
+    .btn.light{ background:#eef2ff; color:var(--primary-ink); }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .layout{ grid-template-columns:1fr; }
+      .sidebar{ position:static; }
+      .page{ margin:22px 6%; }
+    }
+    @media (max-width:640px){
+      .page{ margin:16px; }
+      .content{ padding:18px; }
+      .title{ font-size:24px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1 class="title">London Luxury City Tour – 8 Days / 7 Nights 🇬🇧✨</h1>
+    <p class="lead">A curated luxury discovery of historic sights, royal residences, world-class museums, private transfers and Michelin dining — the best of Greater London with hand-picked experiences.</p>
+
+    <section class="layout">
+      <!-- LEFT: scrollable description -->
+      <article class="content" aria-label="Tour Description">
+        <img src="images/london-uk.avif" alt="London skyline with the Thames and London Eye" class="hero">
+        <h2>Tour Overview</h2>
+        <p class="kv"><b>Duration:</b> 8 Days / 7 Nights</p>
+        <p class="kv"><b>Destinations Covered:</b> Central London – Westminster – Kensington – Tower of London – Windsor – Bath (optional) – Greenwich</p>
+
+        <h2>Day-wise Itinerary</h2>
+
+        <div class="day"><b>Day 1: Arrival — Welcome to London</b><br>
+          Touch down at London Heathrow (LHR). Private chauffeur transfer to a five-star luxury hotel in Knightsbridge or Mayfair. Evening welcome reception & a signature tasting menu at the hotel restaurant. 🏨 5⭐ Central London • 🍽 Dinner
+        </div>
+
+        <div class="day"><b>Day 2: Westminster, Buckingham Palace & Changing of the Guard</b><br>
+          Private guided walking tour of Westminster: Big Ben, Houses of Parliament, Westminster Abbey (external & optional inside visit). Afternoon private viewing at Buckingham Palace area (photo stop) followed by high tea at an iconic hotel. Evening at leisure. 🏨 London • 🍽 Breakfast & High Tea
+        </div>
+
+        <div class="day"><b>Day 3: The Tower of London & Thames Luxury Cruise</b><br>
+          Private guided visit to the Tower of London (Crown Jewels, Yeoman Warder). Gourmet lunch onboard a private Thames cruise, passing Tower Bridge and the Shard. Evening optional West End theatre with VIP seats. 🏨 London • 🍽 Breakfast & Lunch
+        </div>
+
+        <div class="day"><b>Day 4: Private Shopping & Knightsbridge (Harrods) + Spa</b><br>
+          Personal shopping assistant for Harrods and Bond Street boutiques. Afternoon spa and bespoke pampering session at hotel. Sunset walk through Hyde Park with private picnic if desired. 🏨 London • 🍽 Breakfast
+        </div>
+
+        <div class="day"><b>Day 5: Museums & Galleries — British Museum & National Gallery</b><br>
+          Curated morning tour of the British Museum (key highlights) followed by a private viewing at the National Gallery. Evening Michelin dining experience. 🏨 London • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 6: Day Trip to Windsor Castle & (optional) Bath</b><br>
+          Private chauffeured day trip to Windsor Castle — State Apartments and St George’s Chapel. For guests opting for a longer day, an extension to Bath (UNESCO Roman Baths & Royal Crescent) is available. Luxury picnic or country-house lunch included. 🏨 London • 🍽 Breakfast & Lunch
+        </div>
+
+        <div class="day"><b>Day 7: Greenwich, Royal Observatory & Farewell Dinner</b><br>
+          Private transfer to Greenwich for the Observatory, maritime museum and a scenic stroll through Greenwich Market. Evening farewell dinner with panoramic city views. 🏨 London • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 8: Departure</b><br>
+          Leisurely breakfast, private transfer to airport. Assistance with luggage & departures. 🍽 Breakfast
+        </div>
+
+        <h2>💰 Tour Price</h2>
+        <p>Starting from ₹1,64,999 per person (double occupancy). Single supplements, honeymoon and family packages available.</p>
+
+        <h2>✅ Tour Inclusions</h2>
+        <ul class="check" role="list">
+          <li>7 nights in handpicked 5-star hotels (Mayfair, Knightsbridge or similar)</li>
+          <li>Daily breakfast; selected lunches & dinners as per itinerary</li>
+          <li>Private airport transfers, chauffeured day trips and luxury Thames cruise</li>
+          <li>Private guided tours (licensed Blue Badge guides where applicable)</li>
+          <li>VIP theatre bookings, exclusive experiences and concierge support</li>
+        </ul>
+
+        <h2>❌ Tour Exclusions</h2>
+        <ul class="check" role="list">
+          <li>International flights to/from London</li>
+          <li>Travel insurance, visa fees and personal expenses</li>
+          <li>Optional upgrades and activities not listed in the itinerary</li>
+        </ul>
+
+        <h2>Why Choose Us?</h2>
+        <ul class="clean">
+            <li>✅ Luxury-focused — we select only premium hotels and private experiences</li>
+            <li>✅ Tailored flexibility — customise private day trips (Bath, Oxford, Cotswolds)</li>
+            <li>✅ Local expertise — professional guides and white-glove transfers</li>
+            <li>✅ 24/7 concierge support — we handle bookings, restaurants and special requests</li>
+        </ul>
+
+        <h2>Book Your London Luxury Experience Today! 🇬🇧🌃</h2>
+        <p>📞 Call Us: +91-98765-43210</p>
+        <p>📩 Email: bookings@travely.com</p>
+        <p>🌍 Website: www.travely.com/london</p>
+        <p>🚀 Limited availability — secure your dates for peak-season travel.</p>
+      </article>
+
+      <!-- RIGHT: sticky overview -->
+      <aside class="sidebar" aria-label="Tour Overview">
+        <div class="overview">
+          <h3>Tour Overview</h3>
+          <div class="row"><span class="label">Destination:</span><span>London, Windsor, Greenwich (optional Bath/Oxford)</span></div>
+          <div class="row"><span class="label">Duration:</span><span>8 Days / 7 Nights</span></div>
+          <div class="row"><span class="label">Group size:</span><span>Max 25 People </span></div>
+          <div class="row"><span class="label">Price:</span><span>From ₹99,999 / Per Person</span></div>
+          <div class="cta">
+            <button class="btn primary"onclick="window.location.href='book_tour.html'">Book A Tour</button>
+            <button class="btn light">Download Itinerary</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

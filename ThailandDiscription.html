@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phuket Tour Package – Details</title>
+    <!-- Replace your <style> block with this refined design system -->
+    <style>
+        :root {
+            --bg: #f7f8fb;
+            --panel: #ffffff;
+            --ink: #0f172a;
+            /* dark slate */
+            --muted: #64748b;
+            /* slate-500 */
+            --subtle: #e2e8f0;
+            /* slate-200 */
+            --chip: #f1f5f9;
+            /* slate-100 */
+            --accent: #5b7cfa;
+            /* periwinkle */
+            --accent-ink: #2335a3;
+            --shadow: 0 12px 28px rgba(2, 6, 23, .10);
+            --radius-lg: 22px;
+            --radius-md: 14px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, "Noto Sans";
+            background: var(--bg);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* LEFT margin exactly 10% */
+        .page {
+            margin: 28px 4% 28px 10%;
+        }
+
+        /* Title block */
+        .title {
+            font-size: clamp(28px, 2.8vw, 36px);
+            font-weight: 900;
+            letter-spacing: -.02em;
+            margin: 0 0 10px 0;
+        }
+
+        .lead {
+            max-width: 68ch;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.65;
+            margin: 0 0 22px 0;
+        }
+
+        /* Two-column canvas */
+        .layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.7fr) minmax(280px, .95fr);
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* LEFT scroll panel */
+        .content {
+            background: var(--panel);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            padding: 26px;
+            max-height: calc(100vh - 64px);
+            overflow: auto;
+        }
+
+        .hero {
+            width: 100%;
+            aspect-ratio: 16/7;
+            object-fit: cover;
+            border-radius: 18px;
+            margin-bottom: 16px;
+        }
+
+        /* Section headings and emphasis */
+        h2 {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: -.01em;
+            margin: 18px 0 12px 0;
+        }
+
+        p {
+            margin: 10px 0;
+            max-width: 70ch;
+            line-height: 1.7;
+        }
+
+        .kv {
+            color: #1f2937;
+            margin: 6px 0;
+        }
+
+        .kv b {
+            font-weight: 800;
+        }
+
+        /* Bullets with custom markers like screenshot */
+        ul.list {
+            margin: 6px 0 10px 0;
+            padding-left: 0;
+        }
+
+        ul.list li {
+            list-style: none;
+            margin: 10px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        ul.list li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            top: 0;
+            color: #94a3b8;
+            font-weight: 900;
+        }
+
+        /* Day cards */
+        .day {
+            background: #f5f7ff;
+            border: 1px solid #e7eaff;
+            padding: 16px 16px 14px 16px;
+            border-radius: 16px;
+            margin: 12px 0;
+        }
+
+        .day b {
+            font-weight: 800;
+        }
+
+        /* RIGHT sticky overview card */
+        .sidebar {
+            position: sticky;
+            top: 20px;
+        }
+
+        .overview {
+            background: linear-gradient(0deg, #f4f6ff, #f4f6ff);
+            border: 1px solid #e6e9ff;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            padding: 22px;
+        }
+
+        .overview h3 {
+            margin: 4px 0 14px 0;
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: -.01em;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e5e7eb;
+            font-size: 15.5px;
+        }
+
+        .row:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            color: var(--muted);
+        }
+
+        .cta {
+            margin-top: 16px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            appearance: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 800;
+            padding: 12px 18px;
+            border-radius: 999px;
+        }
+
+        .btn.primary {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn.secondary {
+            background: #eef2ff;
+            color: var(--accent-ink);
+        }
+
+        /* Inline highlight like screenshot bold words */
+        .hi {
+            font-weight: 800;
+        }
+
+        /* Responsive stacks */
+        @media (max-width:1024px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .page {
+                margin: 22px 6%;
+            }
+        }
+
+        @media (max-width:640px) {
+            .page {
+                margin: 16px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .content {
+                padding: 18px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main class="page">
+        <h1 class="title">Phuket, Thailand 🏝️🌊</h1>
+        <p class="lead">Dreaming of island bliss? Our Island Tours offer turquoise waters and hidden coves. Let us guide
+            you to idyllic island getaways!</p>
+
+        <section class="layout">
+            <!-- LEFT: Scrollable content filled with your provided text -->
+            <article class="content" aria-label="Tour Description">
+                <img src="images/thailand.avif" alt="">
+                <h1>Phuket Tour Package – Tropical Paradise Awaits!</h1>
+                <h2>Tour Overview</h2>
+                <p>Experience the ultimate tropical escape with our 11 Days / 10 Nights Thailand Luxury Tour. Explore
+                    Phuket’s breathtaking beaches, vibrant nightlife, cultural wonders, and nearby gems like Krabi and
+                    Similan Islands. Perfect for couples, families, and adventurers.</p>
+                <p class="kv"><b>Duration:</b> 11 Days / 10 Nights</p>
+                <p class="kv"><b>Destinations Covered:</b> Phuket, Phi Phi Islands, Phang Nga Bay, Old Phuket Town,
+                    Krabi, Similan Islands, Coral Island</p>
+                <p class="kv"><b>Best Time to Visit:</b> November – April</p>
+                <p class="kv"><b>Tour Type:</b> Beach / Adventure / Culture / Nightlife</p>
+
+                <h2>🌴 Day‑Wise Itinerary</h2>
+
+                <div class="day"><b>Day 1:</b> Arrival in Phuket – Welcome to Paradise. Airport pickup, private transfer
+                    to luxury beachfront resort, relax at Patong Beach or Thai massage, welcome dinner. 🏨 5‑Star Beach
+                    Resort in Patong • 🍽 Dinner</div>
+
+                <div class="day"><b>Day 2:</b> Phi Phi Islands – Speedboat tour, Maya Bay, snorkeling at Bamboo Island,
+                    Viking Cave & Monkey Beach, buffet lunch at Phi Phi Don. 🏨 5‑Star Beach Resort in Patong • 🍽
+                    Breakfast & Lunch</div>
+
+                <div class="day"><b>Day 3:</b> Phang Nga Bay – Longtail to James Bond Island, sea kayaking through
+                    lagoons & caves, lunch at Panyee Floating Village. 🏨 5‑Star Beach Resort in Patong • 🍽 Breakfast &
+                    Lunch</div>
+
+                <div class="day"><b>Day 4:</b> Cultural & Elephant Sanctuary – Big Buddha, Wat Chalong, ethical
+                    sanctuary experience, Old Phuket Town stroll. 🏨 5‑Star Resort in Kata Beach • 🍽 Breakfast & Lunch
+                </div>
+
+                <div class="day"><b>Day 5:</b> Leisure & Bangla Road Nightlife – Optional water sports, evening shows.
+                    🏨 5‑Star Resort in Kata Beach • 🍽 Breakfast</div>
+
+                <div class="day"><b>Day 6:</b> Coral Island – Snorkeling, banana boat, parasailing, pristine beaches. 🏨
+                    5‑Star Resort in Kata Beach • 🍽 Breakfast & Lunch</div>
+
+                <div class="day"><b>Day 7:</b> Day Trip to Krabi – Railay & Ao Nang nightlife. 🏨 Beachfront Resort in
+                    Krabi • 🍽 Breakfast & Lunch</div>
+
+                <div class="day"><b>Day 8:</b> Four Islands Tour – Chicken, Poda, Tup, Phra Nang; swim, snorkel, sunset
+                    dinner. 🏨 Beachfront Resort in Krabi • 🍽 Breakfast & Lunch</div>
+
+                <div class="day"><b>Day 9:</b> Similan Islands – Full‑day snorkel/diving paradise. 🏨 5‑Star Resort in
+                    Phuket • 🍽 Breakfast & Lunch</div>
+
+                <div class="day"><b>Day 10:</b> Free Day + Spa & Shopping – Cooking class or spa; Jungceylon & markets;
+                    sunset dinner cruise. 🏨 5‑Star Resort in Patong • 🍽 Breakfast & Dinner</div>
+
+                <div class="day"><b>Day 11:</b> Departure – Private airport transfer. 🍽 Breakfast</div>
+
+                <h2>✅ Tour Inclusions</h2>
+                <ul class="check">
+                    <li>Luxury 5‑Star accommodations (beachfront resorts)</li>
+                    <li>Daily breakfast + selected lunches/dinners</li>
+                    <li>Airport & intercity transfers</li>
+                    <li>Phi Phi, Coral, Phang Nga, Krabi, Similan tours</li>
+                    <li>Cultural and Elephant Sanctuary visits</li>
+                    <li>Nightlife and shopping experiences</li>
+                </ul>
+
+                <h2>❌ Tour Exclusions</h2>
+                <ul class="check">
+                    <li>International/Domestic flights</li>
+                    <li>Travel insurance</li>
+                    <li>Personal expenses (shopping, tips)</li>
+                    <li>Extra adventure sports (deep‑sea fishing, ATV)</li>
+                </ul>
+
+                <h2>💰 Tour Price</h2>
+                <p>Starting from $2,799 per person (double occupancy).</p>
+
+                <h2>Contact</h2>
+                <p>📞 +123‑456‑7890 • 📩 bookings@travely.com • 🌍 www.travely.com/phuket</p>
+
+
+
+                <h2>Why Choose Us?</h2>
+                <ul class="clean">
+                    <li>✅ Handpicked Luxury Resorts – Stay in the most beautiful beachfront locations</li>
+                    <li>✅ Tailored Experiences – Customize your trip with optional activities</li>
+                    <li>✅ Seamless Transfers & Expert Guides – Hassle-free travel & local expertise</li>
+                    <li>✅ 24/7 Customer Support – Assistance throughout your trip</li>
+                </ul>
+
+                <h2>Book Your Phuket Adventure Today! 🏝️🌊✨</h2>
+                <p>📞 Call Us: +123-456-7890</p>
+                <p>📩 Email: bookings@travely.com</p>
+                <p>🌍 Website: www.travely.com/phuket</p>
+                <p>🚀 Limited slots available – Secure your Thai getaway now!</p>
+
+            </article>
+
+            <!-- RIGHT: sticky Tour Overview (stays fixed at top on scroll) -->
+            <aside class="sidebar" aria-label="Tour Overview">
+                <div class="overview">
+                    <h3>Tour Overview</h3>
+                    <div class="row"><span class="mute">Destination</span><span>Phuket, Thailand</span></div>
+                    <div class="row"><span class="mute">Duration</span><span>9 – 12 Days</span></div>
+                    <div class="row"><span class="mute">Group size</span><span>Max 10 People</span></div>
+                    <div class="row"><span class="mute">Price</span><span>From ₹1,70,999  / Per Person</span></div>
+                    <div class="cta">
+                        <button class="btn primary"onclick="window.location.href='book_tour.html'">Book A Tour</button>
+                        <button class="btn light">Download Itinerary</button>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+
+</html>

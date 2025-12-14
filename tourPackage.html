@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Cards – Responsive HTML/CSS</title>
+    <style>
+        :root {
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --chip: #f3f4f6;
+            --primary: #5b7cfa;
+            --shadow: 0 8px 20px rgba(0, 0, 0, .08);
+            --radius: 18px;
+            --radius-img: 16px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        a {
+            text-decoration: none;
+            color: #1f2927;
+        }
+
+        /* Page wrapper with 20% left/right margins on desktop */
+        .page {
+            margin: 32px 10%;
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 6px 0 22px 4px;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            gap: 22px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* Card */
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform .25s ease, box-shadow .25s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, .12);
+        }
+
+        /* Image block */
+        .thumb {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            border-top-left-radius: var(--radius);
+            border-top-right-radius: var(--radius);
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transform: scale(1);
+            transition: transform .35s ease;
+        }
+
+        .card:hover .thumb img {
+            transform: scale(1.06);
+        }
+
+        /* Capacity chip */
+        .chip {
+            position: absolute;
+            left: 14px;
+            bottom: 14px;
+            background: rgba(255, 255, 255, .96);
+            color: #111827;
+            padding: 7px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .10);
+            white-space: nowrap;
+        }
+
+        .chip .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #9ca3af;
+            display: inline-block;
+        }
+
+        /* Body */
+        .body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .title {
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 1.15;
+        }
+
+        .meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--chip);
+            padding: 6px 10px;
+            border-radius: 10px;
+        }
+
+        .actions {
+            padding: 0 16px 16px 16px;
+        }
+
+        .btn {
+            width: 100%;
+            background: #eef2ff;
+            color: #283785;
+            border: none;
+            padding: 12px 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background .25s ease, color .25s ease;
+        }
+
+        .card:hover .btn {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .page {
+                margin: 28px 14%;
+            }
+        }
+
+        @media (max-width: 980px) {
+            .page {
+                margin: 24px 10%;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                margin: 18px 20px;
+            }
+
+            /* keep readable on phones */
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .heading {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <h2 class="heading">Popular Destinations</h2>
+
+        <section class="grid">
+            <!-- First screen cards -->
+            <article class="card">
+               <a href="TokyoDiscription.html">
+                 <div class="thumb">
+                     <img src="images/tokoyojapan.avif" alt="Tokyo">
+                     <div class="chip"><span class="dot"></span> Max 15 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Tokyo, Japan</h3>
+                     <div class="meta">
+                         <span>₹1,29,000 / Per person</span>
+                         <span>9 - 12 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="newyorkdiscription.html">
+                 <div class="thumb">
+                     <img src="images/newyorkusa.avif" alt="new York">
+                     <div class="chip"><span class="dot"></span> Max 20 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">New York, USA</h3>
+                     <div class="meta">
+                         <span>₹1,50,200 / Per person</span>
+                         <span>9 - 12 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="Landondiscription.html">
+                 <div class="thumb">
+                     <img src="images/london-uk.avif" alt="London">
+                     <div class="chip"><span class="dot"></span> Max 25 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">London, UK</h3>
+                     <div class="meta">
+                         <span>₹99,999 / Per person</span>
+                         <span>4 - 8 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="romediscription.html">
+                 <div class="thumb">
+                     <img src="images/romeitaly.avif" alt="Italy">
+                     <div class="chip"><span class="dot"></span> Max 16 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Rome, Italy</h3>
+                     <div class="meta">
+                         <span>₹1,10,999 / Per person</span>
+                         <span>9 - 12 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="dubaidiscription.html">
+                 <div class="thumb">
+                     <img src="images/dubai-uae.avif" alt="Uae Dubai">
+                     <div class="chip"><span class="dot"></span> Max 12 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Dubai, UAE</h3>
+                     <div class="meta">
+                         <span>₹89,599 / Per person</span>
+                         <span>9 - 12 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>'
+                </a>
+            </article>
+
+            <article class="card">
+                <a href="Amazondiscription.html">
+                 <div class="thumb">
+                     <img src="images/amazonrainforest.avif" alt="Amazon Rainforest">
+                     <div class="chip"><span class="dot"></span> Max 10 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Amazon Rainforest</h3>
+                     <div class="meta">
+                         <span>₹1,70,000 / Per person</span>
+                         <span>1 - 4 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="borneodiscription.html">
+                 <div class="thumb">
+                     <img src="images/borneo-malaysia.avif" alt="Malaysia">
+                     <div class="chip"><span class="dot"></span> Max 12 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Borneo, Malaysia</h3>
+                     <div class="meta">
+                         <span>₹1,21,000 / Per person</span>
+                         <span>15 - 18 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="blackforestdiscription.html">
+                 <div class="thumb">
+                     <img src="images/blackforest.avif" alt="blackforest">
+                     <div class="chip"><span class="dot"></span> Max 12 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Black Forest</h3>
+                     <div class="meta">
+                         <span>₹99,999 / Per person</span>
+                         <span>5 - 10 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="Maldivesdiscription.html">
+                 <div class="thumb">
+                     <img src="images/maldives.avif" alt="maldives">
+                     <div class="chip"><span class="dot"></span> Max 20 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Maldives</h3>
+                     <div class="meta">
+                         <span>₹70,000 / Per person</span>
+                         <span>9 - 12 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <!-- Second screen cards -->
+            <article class="card">
+                <a href="ThailandDiscription.html">
+                    <div class="thumb">
+                        <img src="images/thailand.avif" alt="Thailand">
+                        <div class="chip"><span class="dot"></span> Max 10 People</div>
+                    </div>
+                    <div class="body">
+                        <h3 class="title">Phuket, Thailand</h3>
+                        <div class="meta">
+                            <span>₹1,70,999 / Per person</span>
+                            <span>9 - 12 Days</span>
+                        </div>
+                    </div>
+                    <div class="actions"><button class="btn">View Details</button></div>
+                </a>
+            </article>
+
+            <article class="card">
+                <a href="Santorinidiscription.html">
+                 <div class="thumb">
+                     <img src="images/santorini=greece.avif" alt="">
+                     <div class="chip"><span class="dot"></span> Max 14 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Santorini, Greece</h3>
+                     <div class="meta">
+                         <span>₹1,30,000 / Per person</span>
+                         <span>9 - 12 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="balidiscription.html">
+                 <div class="thumb">
+                     <img src="images/bali-indonesia.avif" alt="">
+                     <div class="chip"><span class="dot"></span> Max 15 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Bali, Indonesia</h3>
+                     <div class="meta">
+                         <span>₹89,999 / Per person</span>
+                         <span>9 - 12 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="SEYCHELLESDISCRIPTION.html">
+                    <div class="thumb">
+                        <img src="images/seychelles.avif" alt="">
+                        <div class="chip"><span class="dot"></span> Max 12 People</div>
+                    </div>
+                    <div class="body">
+                        <h3 class="title">Seychelles</h3>
+                        <div class="meta">
+                            <span>₹1,21,199 / Per person</span>
+                            <span>9 - 12 Days</span>
+                        </div>
+                    </div>
+                    <div class="actions"><button class="btn">View Details</button></div>
+                </a>
+            </article>
+
+            <article class="card">
+                <a href="mounteverest.html">
+                 <div class="thumb">
+                     <img src="images/mounteverest.avif" alt="">
+                     <div class="chip"><span class="dot"></span> Max 10 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Mount Everest</h3>
+                     <div class="meta">
+                         <span>₹1,50,999 / Per person</span>
+                         <span>13 - 14 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="Mount Kilimanjaro.html">
+                 <div class="thumb">
+                     <img src="images/mountkilimanjaro.avif" alt="">
+                     <div class="chip"><span class="dot"></span> Max 15 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Mount Kilimanjaro</h3>
+                     <div class="meta">
+                         <span>₹1,20,000 / Per person</span>
+                         <span>9 - 12 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="MountFujidiscription.html">
+                 <div class="thumb">
+                     <img src="images/mountfuji.avif" alt="">
+                     <div class="chip"><span class="dot"></span> Max 18 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Mount Fuji</h3>
+                     <div class="meta">
+                         <span>₹1,11,100 / Per person</span>
+                         <span>9 - 12 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="MachuPicchudiscription.html">
+                 <div class="thumb">
+                     <img src="images/machupicchu.avif" alt="">
+                     <div class="chip"><span class="dot"></span> Max 12 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Machu Picchu</h3>
+                     <div class="meta">
+                         <span>₹87,999 / Per person</span>
+                         <span>5 - 6 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+
+            <article class="card">
+                <a href="Parisdiscription.html">
+                  <div class="thumb">
+                     <img src="images/parisfrance.avif" alt="">
+                     <div class="chip"><span class="dot"></span> Max 20 People</div>
+                 </div>
+                 <div class="body">
+                     <h3 class="title">Paris, France</h3>
+                     <div class="meta">
+                         <span>₹1,69,999 / Per person</span>
+                         <span>10 - 15 Days</span>
+                     </div>
+                 </div>
+                 <div class="actions"><button class="btn">View Details</button></div>
+                </a> 
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

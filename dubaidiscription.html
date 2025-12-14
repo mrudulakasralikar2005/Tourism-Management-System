@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dubai Luxury City Tour – Details</title>
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --panel:#ffffff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --border:#e6eaf2;
+      --tint:#f4f6ff;
+      --primary:#5b7cfa;
+      --primary-ink:#2335a3;
+      --shadow:0 12px 28px rgba(2,6,23,.10);
+      --r-lg:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans";
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+
+    /* Page with LEFT 10% margin */
+    .page{ margin:28px 4% 28px 10%; }
+
+    /* Grid: left scrollable, right sticky */
+    .layout{
+      display:grid;
+      grid-template-columns:minmax(0,1.75fr) minmax(300px,.95fr);
+      gap:28px; align-items:start;
+    }
+
+    .content{
+      background:var(--panel); border:1px solid var(--border);
+      border-radius:var(--r-lg); box-shadow:var(--shadow);
+      padding:26px; max-height:calc(100vh - 64px); overflow:auto;
+    }
+    .hero{ width:100%; aspect-ratio:16/7; object-fit:cover; border-radius:18px; margin-bottom:16px; }
+
+    .title{ font-size:clamp(28px,2.6vw,36px); font-weight:900; letter-spacing:-.02em; margin:0 0 10px 0; }
+    .lead{ max-width:68ch; color:var(--muted); font-size:18px; line-height:1.65; margin:0 0 22px 0; }
+
+    h2{ font-size:22px; font-weight:900; letter-spacing:-.01em; margin:18px 0 12px 0; }
+    p{ margin:10px 0; max-width:70ch; line-height:1.7; }
+    .kv{ color:#1f2937; margin:6px 0; }
+    .kv b{ font-weight:800; }
+
+    /* Lists: force each li on new line with clear bullets */
+    ul.clean, ul.check{
+      margin:8px 0 12px 20px;
+      padding-left:20px;
+      list-style-position:outside;
+      list-style-type:disc;
+    }
+    ul.clean li, ul.check li{
+      display:list-item;
+      margin:8px 0;
+    }
+
+    /* Day cards */
+    .day{ background:#f5f7ff; border:1px solid #e7eaff; border-radius:16px; padding:16px; margin:12px 0; }
+    .day b{ font-weight:800; }
+
+    /* Sticky right overview */
+    .sidebar{ position:sticky; top:20px; }
+    .overview{
+      background:var(--tint); border:1px solid #e6e9ff; border-radius:var(--r-lg);
+      box-shadow:var(--shadow); padding:22px;
+    }
+    .overview h3{ margin:6px 0 14px 0; font-size:22px; font-weight:900; letter-spacing:-.01em; }
+    .row{ display:flex; justify-content:space-between; gap:18px; padding:12px 0; border-bottom:1px dashed #e5e7eb; font-size:15.5px; }
+    .row:last-child{ border-bottom:none; }
+    .label{ color:var(--muted); }
+    .cta{ margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn{ border:none; cursor:pointer; font-weight:800; padding:12px 18px; border-radius:999px; }
+    .btn.primary{ background:var(--primary); color:#fff; }
+    .btn.light{ background:#eef2ff; color:var(--primary-ink); }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .layout{ grid-template-columns:1fr; }
+      .sidebar{ position:static; }
+      .page{ margin:22px 6%; }
+    }
+    @media (max-width:640px){
+      .page{ margin:16px; }
+      .content{ padding:18px; }
+      .title{ font-size:24px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1 class="title">Dubai Luxury City Tour – 12 Days / 11 Nights 🇦🇪✨</h1>
+    <p class="lead">Experience Dubai’s skyline, golden deserts, luxury islands and ultra-modern leisure — private transfers, VIP access, curated dining and white-glove concierge throughout your 12-day escape.</p>
+
+    <section class="layout">
+      <!-- LEFT: scrollable description -->
+      <article class="content" aria-label="Tour Description">
+        <img src="images/dubai-uae.avif" alt="Dubai skyline with Burj Khalifa and Palm Jumeirah" class="hero">
+        <h2>Tour Overview</h2>
+        <p class="kv"><b>Duration:</b> 12 Days / 11 Nights</p>
+        <p class="kv"><b>Destinations Covered:</b> Downtown Dubai (Burj Khalifa & Fountain), Palm Jumeirah & Atlantis, Dubai Marina, Jumeirah Beach, Old Dubai (Dubai Creek & Souks), Desert Conservation Reserve, Miracle Garden & Al Futtaim attractions.</p>
+
+        <h2>Day-wise Itinerary</h2>
+
+        <div class="day"><b>Day 1: Arrival — Welcome to Dubai</b><br>
+          Arrival at Dubai International Airport (DXB). Private transfer to a five-star hotel on Palm Jumeirah or in Downtown Dubai. Evening welcome reception with Arabic mezze and a skyline view. 🏨 5⭐ Palm / Downtown • 🍽 Dinner
+        </div>
+
+        <div class="day"><b>Day 2: Downtown Dubai — Burj Khalifa & Dubai Mall</b><br>
+          Private guided morning visit to Burj Khalifa ‘At The Top’ (VIP/skip-the-line where available) and curated time at Dubai Mall (aquarium/photo stops). Evening fountain view and optional rooftop dining. 🏙 Burj Khalifa • 🍽 Breakfast
+        </div>
+
+        <div class="day"><b>Day 3: Palm Jumeirah & Atlantis — Marina Cruise</b><br>
+          Explore Palm Jumeirah, Atlantis (photo stops or optional aquarium/experiences) followed by a private marina yacht cruise at sunset. Evening at leisure with Michelin or chef’s-table dinner options. 🛥 Palm & Marina • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 4: Old Dubai — Creek, Abra Ride & Souks</b><br>
+          Guided tour of Old Dubai: an abra ride across Dubai Creek, visit to Gold & Spice Souks and a private cultural walkthrough including a traditional Emirati tea experience. 🕌 Cultural • 🍽 Breakfast & Lunch
+        </div>
+
+        <div class="day"><b>Day 5: Desert Experience — Conservation Reserve & Bedouin Evening</b><br>
+          Luxury desert day: chauffeured transfer to the desert reserve, wildlife-friendly dune drive options, falconry introduction and an evening Bedouin-style gourmet dinner under the stars. 🏜 Desert Reserve • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 6: Miracle Garden & Leisure</b><br>
+          Visit to Dubai Miracle Garden with its iconic floral displays (seasonal). Afternoon spa and private shopping appointments in Mall of the Emirates or boutiques in Jumeirah. 🌸 Garden & Leisure • 🍽 Breakfast
+        </div>
+
+        <div class="day"><b>Day 7: Hatta or Abu Dhabi (Optional Day Trip)</b><br>
+          Choose between a scenic Hatta mountain & dam day trip for kayaking and heritage visits, or a private excursion to Abu Dhabi for Sheikh Zayed Grand Mosque and Louvre Abu Dhabi. 🏞️ Optional • 🍽 Breakfast & Lunch
+        </div>
+
+        <div class="day"><b>Day 8: Adventure Day — Sky Views, Aquaventure or Dune Activities</b><br>
+          Pick an experience: Sky Views observation, Aquaventure at Atlantis, or adrenaline options like quad biking and sandboarding with a private operator. 🧗 Adventure • 🍽 Breakfast & Lunch
+        </div>
+
+        <div class="day"><b>Day 9: Art & Design — Jameel Arts Centre, Alserkal Avenue</b><br>
+          Curated visits to Dubai’s contemporary art spaces and galleries, private studio viewings and afternoon tea at a design hotel. 🎨 Culture • 🍽 Breakfast
+        </div>
+
+        <div class="day"><b>Day 10: Yacht Day & Private Island Experience</b><br>
+          Full-day private yacht charter to nearby islands or the Palm fringing waters with catered lunch and water sports options. Sunset return and evening at leisure. ⛵ Yacht • 🍽 Breakfast & Lunch
+        </div>
+
+        <div class="day"><b>Day 11: Free Day — Bespoke Arrangements</b><br>
+          Use this day for anything from private jewellery appointments and chef’s table experiences to photography tours, or an extra desert or spa day — concierge will arrange. ✨ Bespoke • 🍽 Breakfast
+        </div>
+
+        <div class="day"><b>Day 12: Departure</b><br>
+          Leisurely breakfast, private transfer to the airport with luggage assistance and farewell service. 🍽 Breakfast
+        </div>
+
+        <h2>💰 Tour Price</h2>
+        <p>Fixed price: ₹89,599 per person (double occupancy). Group departures and small private groups available; optional upgrades priced separately.</p>
+
+        <h2>✅ Tour Inclusions</h2>
+        <ul class="check" role="list">
+          <li>11 nights in handpicked 5-star hotels (Palm Jumeirah, Downtown or Marina options)</li>
+          <li>Daily breakfast; selected lunches & dinners as specified</li>
+          <li>Private airport transfers, luxury yacht & chauffeured day trips</li>
+          <li>Private guided tours and VIP access arrangements where available</li>
+          <li>24/7 concierge support and bespoke bookings</li>
+        </ul>
+
+        <h2>❌ Tour Exclusions</h2>
+        <ul class="check" role="list">
+          <li>International flights to/from Dubai and travel insurance</li>
+          <li>Visa fees (if applicable), personal expenses and gratuities</li>
+          <li>Optional experiences and upgrades not listed in the itinerary</li>
+        </ul>
+
+        <h2>Why Choose Us?</h2>
+        <ul class="clean">
+            <li>✅ Handpicked luxury hotels and private experiences</li>
+            <li>✅ Flexible add-ons — Abu Dhabi, Hatta, private islands or extended yachting</li>
+            <li>✅ Local experts — licensed guides and vetted private operators</li>
+            <li>✅ White-glove support — concierge services for dining, shopping and events</li>
+        </ul>
+
+        <h2>Book Your Dubai Luxury Escape Today! 🇦🇪🌃</h2>
+        <p>📞 Call Us: +91-98765-43210</p>
+        <p>📩 Email: bookings@travely.com</p>
+        <p>🌍 Website: www.travely.com/dubai</p>
+        <p>🚀 Small-group availability — Max 12 people per departure. Reserve early for peak-season dates.</p>
+      </article>
+
+      <!-- RIGHT: sticky overview -->
+      <aside class="sidebar" aria-label="Tour Overview">
+        <div class="overview">
+          <h3>Tour Overview</h3>
+          <div class="row"><span class="label">Destination:</span><span>Dubai (Downtown, Palm, Marina, Old Dubai, Desert Reserve)</span></div>
+          <div class="row"><span class="label">Duration:</span><span>12 Days / 11 Nights</span></div>
+          <div class="row"><span class="label">Group size:</span><span>Max 12 People</span></div>
+          <div class="row"><span class="label">Price:</span><span>₹89,599 / Per Person</span></div>
+          <div class="cta">
+            <button class="btn primary"onclick="window.location.href='book_tour.html'">Book A Tour</button>
+            <button class="btn light">Download Itinerary</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

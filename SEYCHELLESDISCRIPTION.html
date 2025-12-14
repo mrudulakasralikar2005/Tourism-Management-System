@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seychelles Luxury Island Tour – Details</title>
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --panel:#ffffff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --border:#e6eaf2;
+      --tint:#f4f6ff;
+      --primary:#5b7cfa;
+      --primary-ink:#2335a3;
+      --shadow:0 12px 28px rgba(2,6,23,.10);
+      --r-lg:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans";
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+
+    /* Page with LEFT 10% margin */
+    .page{ margin:28px 4% 28px 10%; }
+
+    /* Grid: left scrollable, right sticky */
+    .layout{
+      display:grid;
+      grid-template-columns:minmax(0,1.75fr) minmax(300px,.95fr);
+      gap:28px; align-items:start;
+    }
+
+    .content{
+      background:var(--panel); border:1px solid var(--border);
+      border-radius:var(--r-lg); box-shadow:var(--shadow);
+      padding:26px; max-height:calc(100vh - 64px); overflow:auto;
+    }
+    .hero{ width:100%; aspect-ratio:16/7; object-fit:cover; border-radius:18px; margin-bottom:16px; }
+
+    .title{ font-size:clamp(28px,2.6vw,36px); font-weight:900; letter-spacing:-.02em; margin:0 0 10px 0; }
+    .lead{ max-width:68ch; color:var(--muted); font-size:18px; line-height:1.65; margin:0 0 22px 0; }
+
+    h2{ font-size:22px; font-weight:900; letter-spacing:-.01em; margin:18px 0 12px 0; }
+    p{ margin:10px 0; max-width:70ch; line-height:1.7; }
+    .kv{ color:#1f2937; margin:6px 0; }
+    .kv b{ font-weight:800; }
+
+    /* Lists: force each li on new line with clear bullets */
+    ul.clean, ul.check{
+      margin:8px 0 12px 20px;
+      padding-left:20px;
+      list-style-position:outside;  /* markers outside for proper line starts */
+      list-style-type:disc;
+    } /* Standard list styling per MDN to ensure predictable bullets */
+    ul.clean li, ul.check li{
+      display:list-item;
+      margin:8px 0;
+    } /* Each item is block-level and appears on its own line */
+
+    /* Day cards */
+    .day{ background:#f5f7ff; border:1px solid #e7eaff; border-radius:16px; padding:16px; margin:12px 0; }
+    .day b{ font-weight:800; }
+
+    /* Sticky right overview */
+    .sidebar{ position:sticky; top:20px; }
+    .overview{
+      background:var(--tint); border:1px solid #e6e9ff; border-radius:var(--r-lg);
+      box-shadow:var(--shadow); padding:22px;
+    }
+    .overview h3{ margin:6px 0 14px 0; font-size:22px; font-weight:900; letter-spacing:-.01em; }
+    .row{ display:flex; justify-content:space-between; gap:18px; padding:12px 0; border-bottom:1px dashed #e5e7eb; font-size:15.5px; }
+    .row:last-child{ border-bottom:none; }
+    .label{ color:var(--muted); }
+    .cta{ margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn{ border:none; cursor:pointer; font-weight:800; padding:12px 18px; border-radius:999px; }
+    .btn.primary{ background:var(--primary); color:#fff; }
+    .btn.light{ background:#eef2ff; color:var(--primary-ink); }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .layout{ grid-template-columns:1fr; }
+      .sidebar{ position:static; }
+      .page{ margin:22px 6%; }
+    }
+    @media (max-width:640px){
+      .page{ margin:16px; }
+      .content{ padding:18px; }
+      .title{ font-size:24px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1 class="title">Seychelles Island Escape – Mahé, Praslin, La Digue & More 🏝️✨</h1>
+    <p class="lead">Pristine beaches, granite boulders, coral reefs, and lush islands with luxury stays and smooth transfers throughout the archipelago.</p>
+
+    <section class="layout">
+      <!-- LEFT: scrollable description -->
+      <article class="content" aria-label="Tour Description">
+        <img src="images/seychelles.avif" alt="">
+        <h2>Tour Overview</h2>
+        <p class="kv"><b>Duration:</b> 11 Days / 10 Nights</p>
+        <p class="kv"><b>Destinations Covered:</b> Mahé – Praslin – La Digue – Silhouette Island – Curieuse Island – Cousin Island</p>
+
+        <h2>Day‑wise Itinerary</h2>
+
+        <div class="day"><b>Day 1: Arrival in Seychelles – Welcome to Paradise</b><br>
+          Land at Seychelles International Airport (SEZ), Mahé. Private transfer to luxury beachfront resort. Sunset welcome drink + candlelight dinner. 🏨 5⭐ Beach Resort, Mahé • 🍽 Dinner
+        </div>
+
+        <div class="day"><b>Day 2: Mahé Island – Capital City & Beaches</b><br>
+          Explore Victoria city (Clock Tower, Sir Selwyn Clarke Market, Botanical Gardens). Afternoon at Anse Intendance Beach. Evening free for spa session / private beach walk. 🏨 Mahé • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 3: Marine Adventure at Sainte Anne Marine Park</b><br>
+          Snorkeling / Scuba diving in Ste. Anne Marine Park. Spot coral reefs, sea turtles, tropical fish. Evening leisure at Beau Vallon Beach. 🏨 Mahé • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 4: Ferry to Praslin – UNESCO Vallée de Mai</b><br>
+          High-speed ferry (or optional scenic flight). Visit Vallée de Mai (Coco de Mer palms, Black Parrots). Evening at Anse Lazio Beach. 🏨 Praslin • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 5: Praslin – Curieuse Island Excursion</b><br>
+          Boat trip to Curieuse Island. See giant Aldabra tortoises & mangrove forests. Picnic lunch on the island. 🏨 Praslin • 🍽 Breakfast, Lunch & Dinner
+        </div>
+
+        <div class="day"><b>Day 6: La Digue – Biking Adventure</b><br>
+          Ferry to La Digue. Explore Anse Source d’Argent, L’Union Estate (vanilla farm). Sunset photography at granite rock beaches. 🏨 Praslin • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 7: Cousin Island Nature Reserve</b><br>
+          Visit Cousin Island, a bird & turtle sanctuary. Guided eco-tour + snorkeling. Evening back to Praslin. 🏨 Praslin • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 8: Silhouette Island Luxury Escape</b><br>
+          Transfer to Silhouette Island (private island). Stay in a luxury eco-resort surrounded by mountains & beaches. Leisure evening at resort. 🏨 Silhouette Island • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 9: Silhouette – Hiking & Spa Retreat</b><br>
+          Optional guided hiking trails (rainforest & waterfalls). Relaxing spa & wellness therapy. 🏨 Silhouette Island • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 10: Sunset Catamaran Cruise</b><br>
+          Return to Mahé. Leisure morning at hotel. Evening luxury catamaran cruise with champagne & live music. 🏨 Mahé • 🍽 Breakfast & Dinner
+        </div>
+
+        <div class="day"><b>Day 11: Departure from Seychelles</b><br>
+          Relaxed breakfast & beach walk. Private transfer to airport. 🍽 Breakfast
+        </div>
+
+        <h2>💰 Tour Price</h2>
+        <p>Starting from $4,499 per person (double occupancy). Honeymoon, Family & Group Discounts available.</p>
+
+        <h2>✅ Tour Inclusions</h2>
+        <ul class="check" role="list">
+          <li>Luxury beachfront accommodations across Mahé, Praslin, La Digue, Silhouette</li>
+          <li>Daily breakfast with selected lunches/dinners as per itinerary</li>
+          <li>All inter-island ferries/transfers and private airport pick/drop</li>
+          <li>Marine park activities and guided eco‑tours (where mentioned)</li>
+          <li>Professional local guides and support</li>
+        </ul>
+
+        <h2>❌ Tour Exclusions</h2>
+        <ul class="check" role="list">
+          <li>International flights</li>
+          <li>Travel insurance</li>
+          <li>Personal expenses, tips, and optional activities not listed</li>
+        </ul>
+
+        <h2>Why Choose Us?</h2>
+        <ul class="clean">
+            <li>✅ Handpicked Luxury Resorts – Stay in the most beautiful beachfront locations</li>
+            <li>✅ Tailored Experiences – Customize your trip with optional activities</li>
+            <li>✅ Seamless Transfers & Expert Guides – Hassle-free travel & local expertise</li>
+            <li>✅ 24/7 Customer Support – Assistance throughout your trip</li>
+        </ul>
+
+        <h2>Book Your Phuket Adventure Today! 🏝️🌊✨</h2>
+        <p>📞 Call Us: +123-456-7890</p>
+        <p>📩 Email: bookings@travely.com</p>
+        <p>🌍 Website: www.travely.com/phuket</p>
+        <p>🚀 Limited slots available – Secure your Thai getaway now!</p>
+      </article>
+
+      <!-- RIGHT: sticky overview -->
+      <aside class="sidebar" aria-label="Tour Overview">
+        <div class="overview">
+          <h3>Tour Overview</h3>
+          <div class="row"><span class="label">Destination:</span><span>Seychelles (Mahé, Praslin, La Digue)</span></div>
+          <div class="row"><span class="label">Duration:</span><span>11 Days / 10 Nights</span></div>
+          <div class="row"><span class="label">Group size:</span><span>Max 10–16 People</span></div>
+          <div class="row"><span class="label">Price:</span><span>From ₹1,21,199 / Per Person</span></div>
+          <div class="cta">
+            <button class="btn primary"onclick="window.location.href='book_tour.html'">Book A Tour</button>
+            <button class="btn light">Download Itinerary</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
